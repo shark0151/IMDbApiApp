@@ -1,0 +1,11 @@
+D:\Git\IMDbApiLib\IMDbApiLib\bin\Debug\net46\IMDbApiLib.dll
+D:\Git\IMDbApiLib\IMDbApiLib\bin\Debug\net46\IMDbApiLib.pdb
+D:\Git\IMDbApiLib\IMDbApiLib\bin\Debug\net46\Newtonsoft.Json.dll
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.AssemblyReference.cache
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.AssemblyInfoInputs.cache
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.AssemblyInfo.cs
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.CoreCompileInputs.cache
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.CopyComplete
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.dll
+D:\Git\IMDbApiLib\IMDbApiLib\obj\Debug\net46\IMDbApiLib.pdb

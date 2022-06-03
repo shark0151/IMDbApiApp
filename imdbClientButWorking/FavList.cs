@@ -32,7 +32,7 @@ namespace imdbClientButWorking
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             User user = new User();
             user.username = textBox1.Text;
             user.password = textBox2.Text;
@@ -40,11 +40,12 @@ namespace imdbClientButWorking
             {
                 FavList2 favList2 = new FavList2(0);
                 favList2.ShowDialog();
-                this.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Incorrect credentials.");
+                this.Show();
             }
         }
 

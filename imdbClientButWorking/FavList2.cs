@@ -23,16 +23,16 @@ namespace imdbClientButWorking
             //DatabaseController databaseController = new DatabaseController();
             UserId = controller.UserId;
             databaseController = controller;
-            favoriteList = Task.Run(() => databaseController.GetFavListAsync(UserId)).Result;
-            dataGridView2.DataSource = favoriteList;
-            dataGridView2.Columns[0].Visible = false;
-            dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
+            
         }
 
-        override protected void OnLoad(EventArgs e)
+        override protected async void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
+            favoriteList = await databaseController.GetFavListAsync(UserId);
+            dataGridView2.DataSource = await databaseController.GetFavListAsync(UserId);
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
 
         }
         private async void button1_Click(object sender, EventArgs e)

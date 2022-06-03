@@ -23,7 +23,6 @@ namespace imdbClientButWorking
             //DatabaseController databaseController = new DatabaseController();
             UserId = controller.UserId;
             databaseController = controller;
-            
         }
 
         override protected async void OnLoad(EventArgs e)
@@ -33,6 +32,8 @@ namespace imdbClientButWorking
             dataGridView2.DataSource = await databaseController.GetFavListAsync(UserId);
             dataGridView2.Columns[0].Visible = false;
             dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[dataGridView2.ColumnCount - 1].Visible = false;
 
         }
         private async void button1_Click(object sender, EventArgs e)
@@ -58,11 +59,13 @@ namespace imdbClientButWorking
         private void button2_Click(object sender, EventArgs e)
         {
             //search by year
+            int year = Convert.ToInt32(numericUpDown1.Value);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             //search by actor
+            string input = textBox2.Text;
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

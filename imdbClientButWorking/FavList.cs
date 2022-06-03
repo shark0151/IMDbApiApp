@@ -39,8 +39,9 @@ namespace imdbClientButWorking
             if (databaseController.CheckUserCredentials(user).Result)//login check
             {
                 FavList2 favList2 = new FavList2(0);
-                favList2.ShowDialog();
                 this.Hide();
+                favList2.ShowDialog();
+                this.Show();
             }
             else
             {

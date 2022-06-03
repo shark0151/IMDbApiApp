@@ -18,6 +18,17 @@ namespace ClientTest
         }
 
         [TestMethod]
+        public async Task TestSearchMovie()
+        {
+            DatabaseController databaseController = new DatabaseController();
+
+            SearchData results = new SearchData();
+            results = await databaseController.SearchImdbTask("Inception");
+
+            Assert.IsNotNull(results);
+        }
+
+        [TestMethod]
         public async Task TestGetFavList()
         {
             DatabaseController databaseController = new DatabaseController();
@@ -27,6 +38,24 @@ namespace ClientTest
             Assert.IsNotNull(favList);
         }
 
+        [TestMethod]
+        public async Task CheckUserExist()
+        {
+            DatabaseController databaseController = new DatabaseController();
+            bool userExists;
+            userExists = await databaseController.CheckUserExists("test");
+
+            Assert.IsTrue(userExists);
+        }
+        [TestMethod]
+        public async Task CheckUserNotExist()
+        {
+            DatabaseController databaseController = new DatabaseController();
+            bool userExists;
+            userExists = await databaseController.CheckUserExists("test22");
+
+            Assert.IsFalse(userExists);
+        }
 
     }
 }

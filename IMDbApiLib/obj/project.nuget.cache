@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8ChdnmGgfjlJK0Lw5nM4hri6XxRIgXilHK+H0jpNtDp2O1PGB06u34Xq4hLlG9/QTsQBhuJD9yILos7DsPX7kQ==",
+  "dgSpecHash": "DsQRrQHUIYc86SD80i1JsrQXeXSx/bPt14WRxU+4PdffRjNSXxgheDSb4DdX6aJcVrmqDzEVdd2pR/C6PXs+2g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
+  "projectFilePath": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\raven\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\raven\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\raven\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\raven\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\vladf\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\vladf\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\vladf\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\vladf\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

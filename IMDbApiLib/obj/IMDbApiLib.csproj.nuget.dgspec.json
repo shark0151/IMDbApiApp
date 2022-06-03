@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {}
+    "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {
+    "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {
       "version": "1.8.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
+        "projectUniqueName": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
         "projectName": "IMDbApiLib",
-        "projectPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
-        "packagesPath": "C:\\Users\\raven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\obj\\",
+        "projectPath": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
+        "packagesPath": "C:\\Users\\vladf\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "C:\\Users\\raven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

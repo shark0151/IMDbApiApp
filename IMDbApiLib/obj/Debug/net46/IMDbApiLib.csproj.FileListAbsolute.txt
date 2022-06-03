@@ -20,3 +20,14 @@ C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib
 C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.CopyComplete
 C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.dll
 C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.pdb
+D:\Git\IMDbApiApp\IMDbApiLib\bin\Debug\net46\IMDbApiLib.dll
+D:\Git\IMDbApiApp\IMDbApiLib\bin\Debug\net46\IMDbApiLib.pdb
+D:\Git\IMDbApiApp\IMDbApiLib\bin\Debug\net46\Newtonsoft.Json.dll
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.AssemblyReference.cache
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.AssemblyInfoInputs.cache
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.AssemblyInfo.cs
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.CoreCompileInputs.cache
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.csproj.CopyComplete
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.dll
+D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\net46\IMDbApiLib.pdb

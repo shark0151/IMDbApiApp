@@ -12,9 +12,11 @@ namespace imdbClientButWorking
 {
     public partial class FavList : Form
     {
+        DatabaseController databaseController;
         public FavList()
         {
             InitializeComponent();
+            databaseController = new DatabaseController();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,8 +46,13 @@ namespace imdbClientButWorking
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(true)//check user existence, register and login
+            if(!databaseController.CheckUserExists(textBox1.Text).Result)//check user existence, register and login
             {
+                if(textBox2.Text.Length < 4)
+                { 
+                    MessageBox.Show("Password needs to be at leats 4 characters");
+                }
+                else
                 button1.PerformClick();
             }
             else

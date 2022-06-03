@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\ClientTest\\ClientTest.csproj": {}
+    "D:\\Git\\IMDbApiApp\\ClientTest\\ClientTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\ClientTest\\ClientTest.csproj": {
+    "D:\\Git\\IMDbApiApp\\ClientTest\\ClientTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\ClientTest\\ClientTest.csproj",
+        "projectUniqueName": "D:\\Git\\IMDbApiApp\\ClientTest\\ClientTest.csproj",
         "projectName": "ClientTest",
-        "projectPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\ClientTest\\ClientTest.csproj",
-        "packagesPath": "C:\\Users\\raven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\ClientTest\\obj\\",
+        "projectPath": "D:\\Git\\IMDbApiApp\\ClientTest\\ClientTest.csproj",
+        "packagesPath": "C:\\Users\\vladf\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\IMDbApiApp\\ClientTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\raven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj": {
-                "projectPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj"
+              "D:\\Git\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj": {
+                "projectPath": "D:\\Git\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj"
               }
             }
           }
@@ -80,18 +80,18 @@
         }
       }
     },
-    "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {
+    "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {
       "version": "1.8.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
+        "projectUniqueName": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
         "projectName": "IMDbApiLib",
-        "projectPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
-        "packagesPath": "C:\\Users\\raven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\obj\\",
+        "projectPath": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj",
+        "packagesPath": "C:\\Users\\vladf\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "C:\\Users\\raven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -165,17 +165,17 @@
         }
       }
     },
-    "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj": {
+    "D:\\Git\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj",
+        "projectUniqueName": "D:\\Git\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj",
         "projectName": "imdbClientButWorking",
-        "projectPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj",
-        "packagesPath": "C:\\Users\\raven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\imdbClientButWorking\\obj\\",
+        "projectPath": "D:\\Git\\IMDbApiApp\\imdbClientButWorking\\imdbClientButWorking.csproj",
+        "packagesPath": "C:\\Users\\vladf\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\IMDbApiApp\\imdbClientButWorking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\raven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vladf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -189,8 +189,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {
-                "projectPath": "C:\\Users\\raven\\Documents\\GitHub\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj"
+              "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj": {
+                "projectPath": "D:\\Git\\IMDbApiApp\\IMDbApiLib\\IMDbApiLib.csproj"
               }
             }
           }

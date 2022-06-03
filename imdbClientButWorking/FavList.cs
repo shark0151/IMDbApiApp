@@ -36,9 +36,9 @@ namespace imdbClientButWorking
             User user = new User();
             user.username = textBox1.Text;
             user.password = textBox2.Text;
-            if (databaseController.CheckUserCredentials(user).Result)//login check
+            if (Task.Run(() => databaseController.CheckUserCredentials(user)).Result)//login check
             {
-                FavList2 favList2 = new FavList2(databaseController.UserId);
+                FavList2 favList2 = new FavList2(databaseController);
                 this.Hide();
                 favList2.ShowDialog();
                 this.Show();

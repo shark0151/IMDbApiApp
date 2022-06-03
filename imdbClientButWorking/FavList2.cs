@@ -14,18 +14,26 @@ namespace imdbClientButWorking
     public partial class FavList2 : Form
     {
         private int UserId;
-        public FavList2(int userId)
+        DatabaseController DatabaseController;
+        List<TitleData> favoriteList = new List<TitleData>();
+        public FavList2(DatabaseController controller)
         {
             InitializeComponent();
-            DatabaseController databaseController = new DatabaseController();
-            UserId = userId;
-            List<TitleData> favoriteList = new List<TitleData>(databaseController.GetFavListAsync(UserId).Result);
-            
-            dataGridView2.DataSource=favoriteList;
+            //DatabaseController databaseController = new DatabaseController();
+            UserId = controller.UserId;
+            DatabaseController = controller;
+            favoriteList = Task.Run(() => DatabaseController.GetFavListAsync(UserId)).Result;
+            dataGridView2.DataSource = favoriteList;
             dataGridView2.Columns[0].Visible = false;
             dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
         }
 
+        override protected void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             //search by title

@@ -54,12 +54,25 @@ namespace imdbClientButWorking
         {
             if(!await databaseController.CheckUserExists(textBox1.Text))//check user existence, register and login
             {
-                if(textBox2.Text.Length < 4)
-                { 
+                if (textBox2.Text.Length < 4)
+                {
                     MessageBox.Show("Password needs to be at leats 4 characters");
                 }
                 else
-                button1.PerformClick();
+                {
+                    User user = new User();
+                    user.username=textBox1.Text;
+                    user.password=textBox2.Text;
+                    bool successful = await databaseController.CreateUser(user);
+                    if (successful)
+                    {
+                        button1.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("There was an error");
+                    }
+                }
             }
             else
             {

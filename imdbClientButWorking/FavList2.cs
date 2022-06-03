@@ -14,15 +14,16 @@ namespace imdbClientButWorking
     public partial class FavList2 : Form
     {
         private int UserId;
-        DatabaseController DatabaseController;
+        DatabaseController databaseController;
         List<TitleData> favoriteList = new List<TitleData>();
+        List<TitleData> resultList = new List<TitleData>();
         public FavList2(DatabaseController controller)
         {
             InitializeComponent();
             //DatabaseController databaseController = new DatabaseController();
             UserId = controller.UserId;
-            DatabaseController = controller;
-            favoriteList = Task.Run(() => DatabaseController.GetFavListAsync(UserId)).Result;
+            databaseController = controller;
+            favoriteList = Task.Run(() => databaseController.GetFavListAsync(UserId)).Result;
             dataGridView2.DataSource = favoriteList;
             dataGridView2.Columns[0].Visible = false;
             dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
@@ -31,13 +32,27 @@ namespace imdbClientButWorking
         override protected void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            
-            
+
+
         }
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             //search by title
-            
+            dataGridView1.DataSource = null;
+            resultList.Clear();
+            SearchData search = await databaseController.SearchImdbTask(textBox1.Text);
+            if (search != null)
+            {
+                foreach (SearchResult searchResult in search.Results)
+                {
+                    resultList.Add(await databaseController.GetMovieFromImdbTask(searchResult.Id));
+                }
+                dataGridView1.DataSource = resultList;
+            }
+            else
+            {
+                MessageBox.Show("Reached limit of request amount (100).");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

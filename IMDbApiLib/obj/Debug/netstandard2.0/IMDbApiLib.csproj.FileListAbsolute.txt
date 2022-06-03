@@ -18,13 +18,3 @@ C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\I
 C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.csproj.CoreCompileInputs.cache
 C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.dll
 C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.pdb
-D:\Git\IMDbApiApp\IMDbApiLib\bin\Debug\netstandard2.0\IMDbApiLib.deps.json
-D:\Git\IMDbApiApp\IMDbApiLib\bin\Debug\netstandard2.0\IMDbApiLib.dll
-D:\Git\IMDbApiApp\IMDbApiLib\bin\Debug\netstandard2.0\IMDbApiLib.pdb
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.csproj.AssemblyReference.cache
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.GeneratedMSBuildEditorConfig.editorconfig
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.AssemblyInfoInputs.cache
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.AssemblyInfo.cs
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.csproj.CoreCompileInputs.cache
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.dll
-D:\Git\IMDbApiApp\IMDbApiLib\obj\Debug\netstandard2.0\IMDbApiLib.pdb

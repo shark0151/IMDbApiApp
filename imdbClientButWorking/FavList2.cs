@@ -13,11 +13,13 @@ namespace imdbClientButWorking
 {
     public partial class FavList2 : Form
     {
+        private int UserId;
         public FavList2(int userId)
         {
             InitializeComponent();
             DatabaseController databaseController = new DatabaseController();
-            List<TitleData> favoriteList = new List<TitleData>(databaseController.GetFavListAsync(userId).Result);
+            UserId = userId;
+            List<TitleData> favoriteList = new List<TitleData>(databaseController.GetFavListAsync(UserId).Result);
             
             dataGridView2.DataSource=favoriteList;
             dataGridView2.Columns[0].Visible = false;

@@ -18,6 +18,7 @@ namespace imdbClientButWorking
     {
         private string urlLink = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
         private IMDbApiLib.ApiLib imdApiLib = new ApiLib("k_9o16s5zl");
+        public int UserId = 0;
         private String sqlDatoToJson(SqlDataReader dataReader)
         {
             var dataTable = new DataTable();
@@ -132,7 +133,8 @@ namespace imdbClientButWorking
                 {
                     try
                     {
-                        user1.user_id = reader.GetInt32(0).ToString();
+                        UserId = reader.GetInt32(0);
+                        user1.user_id = UserId.ToString();
                         user1.username = reader.GetString(1);
                         user1.password = reader.GetString(2);
                     }

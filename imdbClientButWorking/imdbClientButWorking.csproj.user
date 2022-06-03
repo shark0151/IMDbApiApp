@@ -4,5 +4,8 @@
     <Compile Update="FavList.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FavList2.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

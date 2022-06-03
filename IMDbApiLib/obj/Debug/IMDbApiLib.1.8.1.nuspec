@@ -24,8 +24,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Git\IMDbApiLib\IMDbApiLib\bin\Debug\net46\IMDbApiLib.dll" target="lib\net46\IMDbApiLib.dll" />
-    <file src="D:\Git\IMDbApiLib\IMDbApiLib\bin\Debug\netstandard2.0\IMDbApiLib.dll" target="lib\netstandard2.0\IMDbApiLib.dll" />
-    <file src="D:\Git\IMDbApiLib\IMDbApiLib\IMDbApiLib_Icon.png" target="IMDbApiLib_Icon.png" />
+    <file src="C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\bin\Debug\net46\IMDbApiLib.dll" target="lib\net46\IMDbApiLib.dll" />
+    <file src="C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\bin\Debug\netstandard2.0\IMDbApiLib.dll" target="lib\netstandard2.0\IMDbApiLib.dll" />
+    <file src="C:\Users\raven\Documents\GitHub\IMDbApiApp\IMDbApiLib\IMDbApiLib_Icon.png" target="IMDbApiLib_Icon.png" />
   </files>
 </package>

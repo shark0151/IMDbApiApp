@@ -1,5 +1,6 @@
 using IMDbApiLib.Models;
 using imdbClientButWorking;
+using imdbClientButWorking.Models;
 
 namespace ClientTest
 {
@@ -55,6 +56,18 @@ namespace ClientTest
             userExists = await databaseController.CheckUserExists("test22");
 
             Assert.IsFalse(userExists);
+        }
+        [TestMethod]
+        public async Task CheckCredentials()
+        {
+            DatabaseController databaseController = new DatabaseController();
+            User user = new User();
+            user.username = "test";
+            user.password = "test123";
+            bool loggedin;
+            loggedin = await databaseController.CheckUserCredentials(user);
+
+            Assert.IsTrue(loggedin);
         }
 
     }

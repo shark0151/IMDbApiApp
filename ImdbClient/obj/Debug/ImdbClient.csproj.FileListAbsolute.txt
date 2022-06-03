@@ -1,5 +1,0 @@
-D:\Git\IMDbApiLib\ImdbClient\obj\Debug\ImdbClient.csproj.AssemblyReference.cache
-D:\Git\IMDbApiLib\ImdbClient\obj\Debug\ImdbClient.csproj.SuggestedBindingRedirects.cache
-D:\Git\IMDbApiLib\ImdbClient\obj\Debug\ImdbClient.Properties.Resources.resources
-D:\Git\IMDbApiLib\ImdbClient\obj\Debug\ImdbClient.csproj.GenerateResource.cache
-D:\Git\IMDbApiLib\ImdbClient\obj\Debug\ImdbClient.csproj.CoreCompileInputs.cache

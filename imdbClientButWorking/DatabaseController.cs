@@ -101,7 +101,7 @@ namespace imdbClientButWorking
 
         public async Task<bool> CreateUser(User newUser)
         {
-            string query = "insert into Users(username, password,email) values( @username, @password, @email)";
+            string query = "insert into Users(username, password) values( @username, @password)";
             List<string> mylist = new List<string>();
             int rowsAffected;
             using (SqlConnection conn = new SqlConnection(urlLink))
@@ -110,7 +110,6 @@ namespace imdbClientButWorking
                 SqlCommand command = new SqlCommand(query, conn);
                 command.Parameters.AddWithValue("@username", newUser.username);
                 command.Parameters.AddWithValue("@password", newUser.password);
-                command.Parameters.AddWithValue("@email", newUser.email);
                 rowsAffected = command.ExecuteNonQuery();
                 Console.WriteLine($"Rows affected: {rowsAffected}");
             }

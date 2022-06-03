@@ -25,7 +25,7 @@ namespace imdbClientButWorking
             databaseController = controller;
         }
 
-        override protected async void OnLoad(EventArgs e)
+        protected override async void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             favoriteList = await databaseController.GetFavListAsync(UserId);

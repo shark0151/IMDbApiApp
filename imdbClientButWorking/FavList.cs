@@ -30,13 +30,13 @@ namespace imdbClientButWorking
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             
             User user = new User();
             user.username = textBox1.Text;
             user.password = textBox2.Text;
-            if (Task.Run(() => databaseController.CheckUserCredentials(user)).Result)//login check
+            if (await databaseController.CheckUserCredentials(user))//login check
             {
                 FavList2 favList2 = new FavList2(databaseController);
                 this.Hide();
@@ -50,9 +50,9 @@ namespace imdbClientButWorking
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            if(!databaseController.CheckUserExists(textBox1.Text).Result)//check user existence, register and login
+            if(!await databaseController.CheckUserExists(textBox1.Text))//check user existence, register and login
             {
                 if(textBox2.Text.Length < 4)
                 { 

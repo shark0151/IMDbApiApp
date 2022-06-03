@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using imdbClientButWorking.Models;
 
 namespace imdbClientButWorking
 {
@@ -32,9 +33,12 @@ namespace imdbClientButWorking
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if (true)//login check
+            User user = new User();
+            user.username = textBox1.Text;
+            user.password = textBox2.Text;
+            if (databaseController.CheckUserCredentials(user).Result)//login check
             {
-                FavList2 favList2 = new FavList2();
+                FavList2 favList2 = new FavList2(0);
                 favList2.ShowDialog();
                 this.Show();
             }

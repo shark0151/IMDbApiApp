@@ -117,6 +117,36 @@ namespace imdbClientButWorking
             return rowsAffected > 0;
         }
 
+        public async Task<bool> CheckUserCredentials(User user)
+        {
+            User user1 = new User();
+            string query = "Select * From [Users] where username = @username";
+            List<string> mylist = new List<string>();
+            using (SqlConnection conn = new SqlConnection(urlLink))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@username", user.username);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    try
+                    {
+                        user1.user_id = reader.GetInt32(0).ToString();
+                        user1.username = reader.GetString(1);
+                        user1.password = reader.GetString(2);
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+            }
+
+            return user.password == user1.password && user.username == user1.username;
+        }
+
         #endregion Users
 
         #region IMDB

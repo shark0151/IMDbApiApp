@@ -41,17 +41,18 @@ namespace imdbClientButWorking
             dataGridView1.DataSource = null;
             resultList.Clear();
             SearchData search = await databaseController.SearchImdbTask(textBox1.Text);
-            if (search != null)
+            if (search.Results != null)
             {
-                foreach (SearchResult searchResult in search.Results)
+                bool morethanfive = search.Results.Count >= 5;
+                for (int i = 0; i < Convert.ToInt32(morethanfive) * 5 + Convert.ToInt32(!morethanfive) * search.Results.Count; i ++)
                 {
-                    resultList.Add(await databaseController.GetMovieFromImdbTask(searchResult.Id));
+                    resultList.Add(await databaseController.GetMovieFromImdbTask(search.Results[i].Id));
                 }
                 dataGridView1.DataSource = resultList;
             }
             else
             {
-                MessageBox.Show("Reached limit of request amount (100).");
+                MessageBox.Show(search.ErrorMessage);
             }
         }
 

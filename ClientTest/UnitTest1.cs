@@ -70,5 +70,25 @@ namespace ClientTest
             Assert.IsTrue(loggedin);
         }
 
+        [TestMethod]
+        public async Task AddToFav()
+        {
+            DatabaseController databaseController = new DatabaseController();
+            databaseController.UserId = 1;
+            bool success = await databaseController.AddToFavListAsync("tt0126029");
+
+            Assert.IsTrue(success);
+        }
+
+        [TestMethod]
+        public async Task RemoveFromFav()
+        {
+            DatabaseController databaseController = new DatabaseController();
+            databaseController.UserId = 1;
+            bool success = await databaseController.DeleteFromFavListAsync("tt0126029");
+
+            Assert.IsTrue(success);
+        }
+
     }
 }

@@ -28,44 +28,6 @@ namespace imdbClientButWorking
             return JSONString;
         }
         #region Users
-        public async Task<List<TitleData>> GetFavListAsync(int userid)
-        {
-            string query = "Select movie_id From [favourite_list] where user_id = @id";
-            List<TitleData> mylist = new List<TitleData>();
-            List<string> movie_id_list = new List<string>();
-            using (SqlConnection conn = new SqlConnection(urlLink))
-            {
-                conn.Open();
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@id", userid);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    try
-                    {
-                        string newmovieid = reader.GetString(0);
-                        movie_id_list.Add(newmovieid);
-                        
-                        /*string jsonString = sqlDatoToJson(reader);
-                        TitleData newtitle = JsonSerializer.Deserialize<TitleData>(jsonString)!;
-                        mylist.Add(newtitle);*/
-                    }
-                    catch
-                    {
-                        
-                    }
-
-                }
-            }
-
-            foreach (var VARIABLE in movie_id_list)
-            {
-                TitleData x = new TitleData();
-                x = await GetMovieFromImdbTask(VARIABLE);
-                mylist.Add(x);
-            }
-            return mylist;
-        }
 
         public async Task<bool> CheckUserExists(string username)
         {
@@ -149,6 +111,86 @@ namespace imdbClientButWorking
         }
 
         #endregion Users
+
+        #region FavList
+
+        public async Task<List<TitleData>> GetFavListAsync(int userid)
+        {
+            string query = "Select movie_id From [favourite_list] where user_id = @id";
+            List<TitleData> mylist = new List<TitleData>();
+            List<string> movie_id_list = new List<string>();
+            using (SqlConnection conn = new SqlConnection(urlLink))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@id", userid);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    try
+                    {
+                        string newmovieid = reader.GetString(0);
+                        movie_id_list.Add(newmovieid);
+
+                        /*string jsonString = sqlDatoToJson(reader);
+                        TitleData newtitle = JsonSerializer.Deserialize<TitleData>(jsonString)!;
+                        mylist.Add(newtitle);*/
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+            }
+
+            foreach (var VARIABLE in movie_id_list)
+            {
+                TitleData x = new TitleData();
+                x = await GetMovieFromImdbTask(VARIABLE);
+                mylist.Add(x);
+            }
+            return mylist;
+        }
+
+        public async Task<bool> AddToFavListAsync(string movieId)
+        {
+            string query = "insert into favourite_list(user_id, movie_id) values( @user, @movie)";
+            //List<string> mylist = new List<string>();
+            int rowsAffected;
+            await using (SqlConnection conn = new SqlConnection(urlLink))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@user", UserId);
+                command.Parameters.AddWithValue("@movie", movieId);
+                rowsAffected = command.ExecuteNonQuery();
+                Console.WriteLine($"Rows affected: {rowsAffected}");
+            }
+
+            return rowsAffected > 0;
+        }
+
+        public async Task<bool> DeleteFromFavListAsync(string movieId)
+        {
+            string query = "delete from favourite_list where user_id=@user and movie_id=@movie";
+            //List<string> mylist = new List<string>();
+            int rowsAffected;
+            await using (SqlConnection conn = new SqlConnection(urlLink))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@user", UserId);
+                command.Parameters.AddWithValue("@movie", movieId);
+                rowsAffected = command.ExecuteNonQuery();
+                Console.WriteLine($"Rows affected: {rowsAffected}");
+            }
+
+            return rowsAffected > 0;
+        }
+
+
+        #endregion
 
         #region IMDB
 

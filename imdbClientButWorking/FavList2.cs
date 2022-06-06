@@ -41,10 +41,14 @@ namespace imdbClientButWorking
         #region SearchButtonFunctions
         private async void button1_Click(object sender, EventArgs e)
         {
+            string title = textBox1.Text.Trim();
+            string year = checkBox1.Checked? " "+Convert.ToInt32(numericUpDown1.Value).ToString() : "";
+            string actor = " " + textBox2.Text.Trim();
+            string searchExpression = (title + year + actor).Trim();
             //search by title
             dataGridView1.DataSource = null;
             resultList.Clear();
-            SearchData search = await databaseController.SearchImdbTask(textBox1.Text);
+            SearchData search = await databaseController.SearchImdbTask(searchExpression);
             if (search.Results != null)
             {
                 bool morethanfive = search.Results.Count >= 2;
@@ -53,40 +57,38 @@ namespace imdbClientButWorking
                     resultList.Add(await databaseController.GetMovieFromImdbTask(search.Results[i].Id));
                 }
                 dataGridView1.DataSource = resultList;
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[dataGridView2.ColumnCount - 1].Visible = false;
             }
             else
             {
                 MessageBox.Show(search.ErrorMessage);
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //search by year
-            int year = Convert.ToInt32(numericUpDown1.Value);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //search by actor
-            string input = textBox2.Text;
-        }
+        
         #endregion
 
         #region FavoriteManagement
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private async void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //add to favorites
             TitleData x =dataGridView1.Rows[e.RowIndex].DataBoundItem as TitleData;
-            
-            
+            bool success =await databaseController.AddToFavListAsync(x.Id);
+            if (!success)
+            {
+                MessageBox.Show("Failed");
+            }
         }
 
-        private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private async void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //remove from favorites
             TitleData x = dataGridView2.Rows[e.RowIndex].DataBoundItem as TitleData;
-            MessageBox.Show(x.FullTitle);
+            bool success = await databaseController.DeleteFromFavListAsync(x.Id);
+            if (!success)
+            {
+                MessageBox.Show("Failed");
+            }
         }
         #endregion
 

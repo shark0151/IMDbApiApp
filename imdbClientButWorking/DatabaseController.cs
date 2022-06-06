@@ -155,7 +155,7 @@ namespace imdbClientButWorking
 
         public async Task<bool> AddToFavListAsync(string movieId)
         {
-            string query = "insert into favourite_list(user_id, movie_id) values( @user, @movie)";
+            string query = "IF (SELECT count(*)FROM favourite_list WHERE user_id =@user AND movie_id =@movie) < 1 INSERT INTO favourite_list(user_id, movie_id) values(@user, @movie);";
             //List<string> mylist = new List<string>();
             int rowsAffected;
             await using (SqlConnection conn = new SqlConnection(urlLink))

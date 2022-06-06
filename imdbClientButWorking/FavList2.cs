@@ -78,6 +78,14 @@ namespace imdbClientButWorking
             {
                 MessageBox.Show("Failed");
             }
+            else
+            {
+                dataGridView2.DataSource = null;
+                favoriteList.Add(x);
+                dataGridView2.DataSource = favoriteList;
+                dataGridView2.Columns[0].Visible = false;
+                dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
+            }
         }
 
         private async void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -88,6 +96,14 @@ namespace imdbClientButWorking
             if (!success)
             {
                 MessageBox.Show("Failed");
+            }
+            else
+            {
+                dataGridView2.DataSource = null;
+                favoriteList.Remove(x);
+                dataGridView2.DataSource = favoriteList;
+                dataGridView2.Columns[0].Visible = false;
+                dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
             }
         }
         #endregion

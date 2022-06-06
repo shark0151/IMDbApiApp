@@ -65,6 +65,7 @@
             // 
             // button1
             // 
+            this.button1.AccessibleName = "login_Btn";
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.Location = new System.Drawing.Point(88, 69);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -77,6 +78,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.AccessibleName = "password_field";
             this.textBox2.Location = new System.Drawing.Point(5, 44);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.MaxLength = 64;
@@ -89,6 +91,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.AccessibleName = "username_field";
             this.textBox1.Location = new System.Drawing.Point(5, 20);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.MaxLength = 64;
@@ -99,6 +102,7 @@
             // 
             // FavList
             // 
+            this.AccessibleName = "login_window";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(199, 116);

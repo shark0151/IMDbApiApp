@@ -100,22 +100,6 @@ namespace imdbClientButWorking
                 button1.PerformClick();
             }
         }
-
-        private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                button2.PerformClick();
-            }
-        }
-
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                button3.PerformClick();
-            }
-        }
         #endregion
     }
 }

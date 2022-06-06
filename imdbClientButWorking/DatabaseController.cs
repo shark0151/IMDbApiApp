@@ -102,9 +102,9 @@ namespace imdbClientButWorking
         public async Task<bool> CreateUser(User newUser)
         {
             string query = "insert into Users(username, password) values( @username, @password)";
-            List<string> mylist = new List<string>();
+            //List<string> mylist = new List<string>();
             int rowsAffected;
-            using (SqlConnection conn = new SqlConnection(urlLink))
+            await using (SqlConnection conn = new SqlConnection(urlLink))
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand(query, conn);
@@ -121,8 +121,8 @@ namespace imdbClientButWorking
         {
             User user1 = new User();
             string query = "Select * From [Users] where username = @username";
-            List<string> mylist = new List<string>();
-            using (SqlConnection conn = new SqlConnection(urlLink))
+            //List<string> mylist = new List<string>();
+            await using (SqlConnection conn = new SqlConnection(urlLink))
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand(query, conn);

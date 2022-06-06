@@ -36,6 +36,8 @@ namespace imdbClientButWorking
             dataGridView1.Columns[dataGridView2.ColumnCount - 1].Visible = false;
 
         }
+
+        #region SearchButtonFunctions
         private async void button1_Click(object sender, EventArgs e)
         {
             //search by title
@@ -45,7 +47,7 @@ namespace imdbClientButWorking
             if (search.Results != null)
             {
                 bool morethanfive = search.Results.Count >= 5;
-                for (int i = 0; i < Convert.ToInt32(morethanfive) * 5 + Convert.ToInt32(!morethanfive) * search.Results.Count; i ++)
+                for (int i = 0; i < Convert.ToInt32(morethanfive) * 5 + Convert.ToInt32(!morethanfive) * search.Results.Count; i++)
                 {
                     resultList.Add(await databaseController.GetMovieFromImdbTask(search.Results[i].Id));
                 }
@@ -68,7 +70,9 @@ namespace imdbClientButWorking
             //search by actor
             string input = textBox2.Text;
         }
+        #endregion
 
+        #region FavoriteManagement
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //add to favorites
@@ -80,5 +84,32 @@ namespace imdbClientButWorking
             //remove from favorites
             dataGridView2.Rows.Remove(dataGridView2.Rows[e.RowIndex]);
         }
+        #endregion
+
+        #region EnterEvents
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button2.PerformClick();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3.PerformClick();
+            }
+        }
+        #endregion
     }
 }

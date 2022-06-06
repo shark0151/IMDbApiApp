@@ -22,7 +22,6 @@ namespace imdbClientButWorking
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            
             User user = new User
             {
                 username = textBox1.Text,
@@ -46,6 +45,10 @@ namespace imdbClientButWorking
         {
             if(!await databaseController.CheckUserExists(textBox1.Text))//check user existence, register and login
             {
+                if (textBox1.Text.Length < 4)
+                {
+                    MessageBox.Show("Username needs to be at leats 4 characters.");
+                }
                 if (textBox2.Text.Length < 4)
                 {
                     MessageBox.Show("Password needs to be at leats 4 characters.");

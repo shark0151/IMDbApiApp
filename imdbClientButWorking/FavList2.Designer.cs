@@ -96,7 +96,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(181, 23);
             this.textBox2.TabIndex = 4;
-            
             // 
             // numericUpDown1
             // 
@@ -120,12 +119,12 @@
             0,
             0,
             0});
-            
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(89, 20);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.MaxLength = 128;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 23);
             this.textBox1.TabIndex = 2;

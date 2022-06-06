@@ -8,7 +8,7 @@ namespace ClientTest
     [TestClass]
     public class UITest : AppSession
     {
-        [TestMethod]
+        [TestMethod, TestCategory("LongRunning")]
         public async Task ClickLogin()
         {
             Setup();
@@ -23,7 +23,7 @@ namespace ClientTest
             TearDown();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("LongRunning")]
         public async Task Login()
         {
             Setup();

@@ -51,8 +51,9 @@ namespace imdbClientButWorking
             SearchData search = await databaseController.SearchImdbTask(searchExpression);
             if (search.Results != null)
             {
-                bool morethanfive = search.Results.Count >= 2;
-                for (int i = 0; i < Convert.ToInt32(morethanfive) * 2 + Convert.ToInt32(!morethanfive) * search.Results.Count; i ++)
+                int limit = 5;
+                bool morethanfive = search.Results.Count >= limit;
+                for (int i = 0; i < Convert.ToInt32(morethanfive) * limit + Convert.ToInt32(!morethanfive) * search.Results.Count; i ++)
                 {
                     resultList.Add(await databaseController.GetMovieFromImdbTask(search.Results[i].Id));
                 }

@@ -23,17 +23,20 @@ namespace imdbClientButWorking
             //DatabaseController databaseController = new DatabaseController();
             UserId = controller.UserId;
             databaseController = controller;
+            //favoriteList = Task.Run(() => databaseController.GetFavListAsync(UserId)).Result;
+            
         }
 
         protected override async void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+            
             favoriteList = await databaseController.GetFavListAsync(UserId);
-            dataGridView2.DataSource = await databaseController.GetFavListAsync(UserId);
+            dataGridView2.DataSource = favoriteList;
             dataGridView2.Columns[0].Visible = false;
             dataGridView2.Columns[dataGridView2.ColumnCount - 1].Visible = false;
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[dataGridView2.ColumnCount - 1].Visible = false;
+            
+
 
         }
         private async void button1_Click(object sender, EventArgs e)
@@ -44,8 +47,8 @@ namespace imdbClientButWorking
             SearchData search = await databaseController.SearchImdbTask(textBox1.Text);
             if (search.Results != null)
             {
-                bool morethanfive = search.Results.Count >= 5;
-                for (int i = 0; i < Convert.ToInt32(morethanfive) * 5 + Convert.ToInt32(!morethanfive) * search.Results.Count; i ++)
+                bool morethanfive = search.Results.Count >= 2;
+                for (int i = 0; i < Convert.ToInt32(morethanfive) * 2 + Convert.ToInt32(!morethanfive) * search.Results.Count; i ++)
                 {
                     resultList.Add(await databaseController.GetMovieFromImdbTask(search.Results[i].Id));
                 }
@@ -72,13 +75,16 @@ namespace imdbClientButWorking
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //add to favorites
-            dataGridView2.Rows.Add(dataGridView1.Rows[e.RowIndex]);
+            TitleData x =dataGridView1.Rows[e.RowIndex].DataBoundItem as TitleData;
+            
+            
         }
 
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //remove from favorites
-            dataGridView2.Rows.Remove(dataGridView2.Rows[e.RowIndex]);
+            TitleData x = dataGridView2.Rows[e.RowIndex].DataBoundItem as TitleData;
+            MessageBox.Show(x.FullTitle);
         }
     }
 }

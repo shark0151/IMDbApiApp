@@ -20,22 +20,14 @@ namespace imdbClientButWorking
             databaseController = new DatabaseController();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private async void button1_Click(object sender, EventArgs e)
         {
             
-            User user = new User();
-            user.username = textBox1.Text;
-            user.password = textBox2.Text;
+            User user = new User
+            {
+                username = textBox1.Text,
+                password = textBox2.Text
+            };
             if (await databaseController.CheckUserCredentials(user))//login check
             {
                 FavList2 favList2 = new FavList2(databaseController);
@@ -56,13 +48,15 @@ namespace imdbClientButWorking
             {
                 if (textBox2.Text.Length < 4)
                 {
-                    MessageBox.Show("Password needs to be at leats 4 characters");
+                    MessageBox.Show("Password needs to be at leats 4 characters.");
                 }
                 else
                 {
-                    User user = new User();
-                    user.username=textBox1.Text;
-                    user.password=textBox2.Text;
+                    User user = new User
+                    {
+                        username = textBox1.Text,
+                        password = textBox2.Text
+                    };
                     bool successful = await databaseController.CreateUser(user);
                     if (successful)
                     {
@@ -78,11 +72,6 @@ namespace imdbClientButWorking
             {
                 MessageBox.Show("Account already exists.");
             }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)

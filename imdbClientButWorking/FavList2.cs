@@ -23,8 +23,6 @@ namespace imdbClientButWorking
             //DatabaseController databaseController = new DatabaseController();
             UserId = controller.UserId;
             databaseController = controller;
-            //favoriteList = Task.Run(() => databaseController.GetFavListAsync(UserId)).Result;
-            
         }
 
         protected override async void OnLoad(EventArgs e)
@@ -39,6 +37,8 @@ namespace imdbClientButWorking
 
 
         }
+
+        #region SearchButtonFunctions
         private async void button1_Click(object sender, EventArgs e)
         {
             //search by title
@@ -71,7 +71,9 @@ namespace imdbClientButWorking
             //search by actor
             string input = textBox2.Text;
         }
+        #endregion
 
+        #region FavoriteManagement
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //add to favorites
@@ -86,5 +88,32 @@ namespace imdbClientButWorking
             TitleData x = dataGridView2.Rows[e.RowIndex].DataBoundItem as TitleData;
             MessageBox.Show(x.FullTitle);
         }
+        #endregion
+
+        #region EnterEvents
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void numericUpDown1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button2.PerformClick();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3.PerformClick();
+            }
+        }
+        #endregion
     }
 }
